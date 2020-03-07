@@ -17,7 +17,6 @@ struct News: Codable {
     var publishedAt: Date
 }
 
-
 struct NewsAll: Codable {
     let articles: [News]
 }

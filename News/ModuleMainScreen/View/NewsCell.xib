@@ -9,32 +9,32 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newsCell" id="ysw-s1-6QH" customClass="NewsCell" customModule="News" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="359" height="370"/>
+            <rect key="frame" x="0.0" y="0.0" width="371" height="403"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="359" height="370"/>
+                <rect key="frame" x="0.0" y="0.0" width="371" height="403"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fxK-LN-pHp">
-                        <rect key="frame" x="0.0" y="0.0" width="359" height="286.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="371" height="303.5"/>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="HJm-xc-Sl2">
-                        <rect key="frame" x="8" y="294.5" width="343" height="67.5"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HJm-xc-Sl2">
+                        <rect key="frame" x="8" y="311.5" width="355" height="83.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDD-2U-oVb">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDD-2U-oVb">
+                                <rect key="frame" x="0.0" y="0.0" width="355" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3D-pQ-bpZ" userLabel="Subtitle">
-                                <rect key="frame" x="0.0" y="29" width="343" height="14.5"/>
+                                <rect key="frame" x="0.0" y="37" width="355" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0B-Vs-8qt" userLabel="Date">
-                                <rect key="frame" x="0.0" y="55.5" width="343" height="12"/>
+                                <rect key="frame" x="0.0" y="71.5" width="355" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -53,13 +53,14 @@
                 <constraint firstItem="fxK-LN-pHp" firstAttribute="leading" secondItem="ysw-s1-6QH" secondAttribute="leading" id="hxl-7U-PXJ"/>
                 <constraint firstAttribute="trailing" secondItem="fxK-LN-pHp" secondAttribute="trailing" id="rt7-GW-uxF"/>
             </constraints>
+            <size key="customSize" width="371" height="403"/>
             <connections>
                 <outlet property="dateLabel" destination="Q0B-Vs-8qt" id="tYE-Ra-0SH"/>
                 <outlet property="descriptionLabel" destination="z3D-pQ-bpZ" id="Wsf-wM-uLc"/>
                 <outlet property="imageView" destination="fxK-LN-pHp" id="EkX-T2-xTS"/>
                 <outlet property="titleLabel" destination="dDD-2U-oVb" id="erV-2S-ifN"/>
             </connections>
-            <point key="canvasLocation" x="154.5" y="-23"/>
+            <point key="canvasLocation" x="163.04347826086959" y="-12.388392857142856"/>
         </collectionViewCell>
     </objects>
 </document>

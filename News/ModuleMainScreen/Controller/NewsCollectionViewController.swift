@@ -8,6 +8,7 @@
 
 import UIKit
 import MaterialComponents
+import SafariServices
 
 class NewsCollectionViewController: UICollectionViewController {
     
@@ -18,7 +19,6 @@ class NewsCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewModel = NewsViewModel()
         configureAppBar()
         configureTabBar()
@@ -26,6 +26,15 @@ class NewsCollectionViewController: UICollectionViewController {
         
         let cellNib = UINib(nibName: "NewsCell", bundle: .main)
         collectionView.register(cellNib, forCellWithReuseIdentifier: NewsCell.cellID)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
     }
     
     
@@ -83,6 +92,15 @@ class NewsCollectionViewController: UICollectionViewController {
         
         cell.newsViewModel = viewModel?.cellForItemAtIndexPath(atIndexPath: indexPath)
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let url = viewModel?.didSelectRow(atIndexPath: indexPath) else { return  }
+        let config = SFSafariViewController.Configuration()
+        config.entersReaderIfAvailable = true
+        let safariVC = SFSafariViewController(url: url, configuration: config)
+        present(safariVC, animated: true, completion: nil)
+        safariVC.dismissButtonStyle = .close
     }
 }
 

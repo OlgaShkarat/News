@@ -14,6 +14,7 @@ protocol NewsCellViewModelProtocol {
     var title: String? { get }
     var description: String? { get }
     var date: Date? { get }
+    var url: URL? { get }
 }
 
 class NewsCellViewModel: NewsCellViewModelProtocol {
@@ -39,6 +40,13 @@ class NewsCellViewModel: NewsCellViewModelProtocol {
     var date: Date? {
         return news?.publishedAt
      
+    }
+    
+    var url: URL? {
+        if let url = news?.url {
+            return URL(string: url)
+        }
+        return nil
     }
     
     init(news: News) {

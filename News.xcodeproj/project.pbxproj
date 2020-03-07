@@ -90,13 +90,11 @@
 		77231461240EDE6F00558AE5 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				77273BC52414197500B49520 /* ModuleMainScreen */,
+				77244CC6240FB0130009DFDC /* Model */,
 				77AB5EC42412EA02007E8365 /* Storyboards */,
 				77AB5EC32412E9EC007E8365 /* Supporting Files */,
 				77AB5EC22412E95B007E8365 /* Util */,
-				7728662A2412221600465052 /* ViewModel */,
-				77244CC8240FB01C0009DFDC /* Controller */,
-				77244CC7240FB0180009DFDC /* View */,
-				77244CC6240FB0130009DFDC /* Model */,
 				77244CCB240FB4CC0009DFDC /* NetworkServiceLayer */,
 			);
 			path = News;
@@ -135,6 +133,16 @@
 				77244CCF240FBEA30009DFDC /* NetworkManager.swift */,
 			);
 			path = NetworkServiceLayer;
+			sourceTree = "<group>";
+		};
+		77273BC52414197500B49520 /* ModuleMainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				77244CC7240FB0180009DFDC /* View */,
+				7728662A2412221600465052 /* ViewModel */,
+				77244CC8240FB01C0009DFDC /* Controller */,
+			);
+			path = ModuleMainScreen;
 			sourceTree = "<group>";
 		};
 		7728662A2412221600465052 /* ViewModel */ = {

@@ -11,6 +11,7 @@ import Foundation
 protocol NewsViewModelProtocol {
     func numberOfItemsInSection() -> Int
     func cellForItemAtIndexPath(atIndexPath indexPath: IndexPath) -> NewsCellViewModelProtocol
+    func didSelectRow(atIndexPath indexPath: IndexPath) -> URL?
     func fetchData(source: NewsSource, completion: @escaping() ->())
 }
 
@@ -26,6 +27,11 @@ class NewsViewModel: NewsViewModelProtocol {
     func cellForItemAtIndexPath(atIndexPath indexPath: IndexPath) -> NewsCellViewModelProtocol {
         let oneNews = news[indexPath.row]
         return NewsCellViewModel(news: oneNews)
+    }
+    
+    func didSelectRow(atIndexPath indexPath: IndexPath) -> URL? {
+        let oneNews = news[indexPath.row]
+        return URL(string: oneNews.url)
     }
 
     func fetchData(source: NewsSource, completion: @escaping() ->()) {

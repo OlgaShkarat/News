@@ -39,7 +39,6 @@ class NewsCell: UICollectionViewCell {
       imageView.clipsToBounds = true
     }
     
-    
     var newsViewModel: NewsCellViewModelProtocol? {
         willSet(newsViewModel) {
             guard let newsViewModel = newsViewModel else { return }
