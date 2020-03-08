@@ -37,7 +37,6 @@ class NewsCollectionViewController: UICollectionViewController {
         .lightContent
     }
     
-    
     //MARK: - Custom methods
     
     func updateView() {
@@ -56,14 +55,14 @@ class NewsCollectionViewController: UICollectionViewController {
             return UITabBarItem(title: source.title, image: nil, tag: index)
         }
         tabBar.selectedItem = tabBar.items[0]
+        tabBar.tintColor = .white
         tabBar.alignment = .justified
         tabBar.selectedItemTitleFont = UIFont.boldSystemFont(ofSize: 18)
         tabBar.unselectedItemTitleFont = UIFont.boldSystemFont(ofSize: 18)
         tabBar.delegate = self
         appBar.headerStackView.bottomBar = tabBar
     }
-    
-    
+
     func configureAppBar() {
         addChild(appBar.headerViewController)
         appBar.navigationBar.backgroundColor = .clear
@@ -78,7 +77,6 @@ class NewsCollectionViewController: UICollectionViewController {
         
         headerView.trackingScrollView = collectionView
         appBar.addSubviewsToParent()
-        
     }
     
     //MARK: - CollectionViewDelegate&UICollectionViewDataSource
@@ -99,8 +97,8 @@ class NewsCollectionViewController: UICollectionViewController {
         let config = SFSafariViewController.Configuration()
         config.entersReaderIfAvailable = true
         let safariVC = SFSafariViewController(url: url, configuration: config)
-        present(safariVC, animated: true, completion: nil)
         safariVC.dismissButtonStyle = .close
+        present(safariVC, animated: true, completion: nil)
     }
 }
 

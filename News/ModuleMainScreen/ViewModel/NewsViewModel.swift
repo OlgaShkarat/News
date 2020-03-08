@@ -33,7 +33,7 @@ class NewsViewModel: NewsViewModelProtocol {
         let oneNews = news[indexPath.row]
         return URL(string: oneNews.url)
     }
-
+        
     func fetchData(source: NewsSource, completion: @escaping() ->()) {
         
         networkManager.fetchNews(source: source, completion: { [weak self] (news) in
